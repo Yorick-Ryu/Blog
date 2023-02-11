@@ -1,0 +1,22 @@
+.background {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+@each $color in (
+  primary,
+  primary-container,
+  secondary,
+  secondary-container,
+  tertiary,
+  tertiary-container,
+  surface,
+  surface-variant,
+  error,
+  error-container
+) {
+  .background-#{$color} {
+    background-color: var(--color-#{$color});
+    color: var(--color-on-#{$color});
+  }
+};

@@ -1,0 +1,30 @@
+$breakpoints: (
+  "tablet": 600px,
+  "laptop": 1240px,
+  "desktop": 1440px
+);
+
+:root {
+  @include color-scheme(
+    $primary: #543A93,
+    $secondary: #4F485E,
+    $tertiary: #69404D,
+    $neutral: #4E4A54,
+    $neutral-variant: #4D4A4F,
+    $error: #DB3229
+  );
+
+  --opacity-state-hover: 8%;
+  --opacity-state-focus: 12%;
+  --opacity-state-press: 12%;
+  --opacity-state-drag: 16%;
+
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+  --space-5: 64px;
+
+  --transition-duration: 0.2s;
+}

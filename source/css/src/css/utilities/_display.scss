@@ -1,0 +1,83 @@
+.display-none {
+  display: none;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-inline-flex {
+  display: inline-flex;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.display-table {
+  display: table;
+}
+
+.display-table-row {
+  display: table-row;
+}
+
+.display-table-cell {
+  display: table-cell;
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    .display-none\@#{$screen} {
+      display: none;
+    }
+
+    .display-inline\@#{$screen} {
+      display: inline;
+    }
+
+    .display-block\@#{$screen} {
+      display: block;
+    }
+
+    .display-inline-block\@#{$screen} {
+      display: inline-block;
+    }
+
+    .display-flex\@#{$screen} {
+      display: flex;
+    }
+
+    .display-inline-flex\@#{$screen} {
+      display: inline-flex;
+    }
+
+    .display-grid\@#{$screen} {
+      display: grid;
+    }
+
+    .display-table\@#{$screen} {
+      display: table;
+    }
+
+    .display-table-row\@#{$screen} {
+      display: table-row;
+    }
+
+    .display-table-cell\@#{$screen} {
+      display: table-cell;
+    }
+  }
+}

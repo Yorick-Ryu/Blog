@@ -1,0 +1,119 @@
+@each $value in (row, row-reverse, column, column-reverse) {
+  .flex-direction-#{$value} {
+    flex-direction: $value;
+  }
+}
+
+@each $value in (nowrap, wrap, wrap-reverse) {
+  .flex-#{$value} {
+    flex-wrap: $value;
+  }
+}
+
+@each $value in (flex-start, flex-end, center, space-between, space-around, space-evenly) {
+  .justify-content-#{$value} {
+    justify-content: $value;
+  }
+}
+
+@each $value in (flex-start, flex-end, center, stretch, baseline) {
+  .align-items-#{$value} {
+    align-items: $value;
+  }
+}
+
+@each $value in (flex-start, flex-end, center, stretch, space-between, space-around) {
+  .align-content-#{$value} {
+    align-content: $value;
+  }
+}
+
+@for $size from 0 through 5 {
+  .gap-#{$size} {
+    gap: var(--space-#{$size});
+  }
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
+@each $value in (flex-start, flex-end, center, baseline, stretch) {
+  .align-self-#{$value} {
+    align-self: $value;
+  }
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    @each $value in (row, row-reverse, column, column-reverse) {
+      .flex-direction-#{$value}\@#{$screen} {
+        flex-direction: $value;
+      }
+    }
+
+    @each $value in (nowrap, wrap, wrap-reverse) {
+      .flex-#{$value}\@#{$screen} {
+        flex-wrap: $value;
+      }
+    }
+
+    @each $value in (flex-start, flex-end, center, space-between, space-around, space-evenly) {
+      .justify-content-#{$value}\@#{$screen} {
+        justify-content: $value;
+      }
+    }
+
+    @each $value in (flex-start, flex-end, center, stretch, baseline) {
+      .align-items-#{$value}\@#{$screen} {
+        align-items: $value;
+      }
+    }
+
+    @each $value in (flex-start, flex-end, center, stretch, space-between, space-around) {
+      .align-content-#{$value}\@#{$screen} {
+        align-content: $value;
+      }
+    }
+
+    @for $size from 0 through 5 {
+      .gap-#{$size}\@#{$screen} {
+        gap: var(--space-#{$size});
+      }
+    }
+
+    .flex-grow-0\@#{$screen} {
+      flex-grow: 0;
+    }
+
+    .flex-grow-1\@#{$screen} {
+      flex-grow: 1;
+    }
+
+    .flex-shrink-0\@#{$screen} {
+      flex-shrink: 0;
+    }
+
+    .flex-shrink-1\@#{$screen} {
+      flex-shrink: 1;
+    }
+
+    @each $value in (flex-start, flex-end, center, baseline, stretch) {
+      .align-self-#{$value}\@#{$screen} {
+        align-self: $value;
+      }
+    }
+  }
+}

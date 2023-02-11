@@ -1,0 +1,38 @@
+.form {
+}
+
+.form__field {
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.form__row {
+  display: flex;
+  margin: 0 -8px;
+
+  .form__field {
+    padding: 0 8px;
+  }
+}
+
+.form__label {
+  display: block;
+  padding: 8px;
+  color: var(--color-on-background);
+}
+
+.form__control {
+  display: flex;
+  cursor: pointer;
+}
+
+.form__control--inline {
+  display: inline-flex;
+}
+
+.form__control__label {
+  padding: 8px;
+  line-height: 24px;
+  cursor: pointer;
+  flex-grow: 1;
+}

@@ -1,0 +1,330 @@
+.button {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-size: 16px;
+  vertical-align: middle;
+  background: transparent;
+  cursor: pointer;
+
+  @include state-layer;
+}
+
+.button--disabled,
+button[disabled] {
+  pointer-events: none;
+}
+
+.button__icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+
+  svg {
+    height: 18px;
+    width: 18px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 18px;
+  }
+
+  &:first-child {
+    margin: 0 8px 0 -8px;
+  }
+
+  &:last-child {
+    margin: 0 -8px 0 8px;
+  }
+}
+
+.button--elevated {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--shadow-1);
+  background-color: var(--color-surface-1);
+
+  &:hover {
+    background-color: var(--color-surface-2);
+    box-shadow: var(--shadow-2);
+  }
+
+  &:focus {
+    background-color: var(--color-surface-1);
+    box-shadow: var(--shadow-1);
+  }
+
+  &:active {
+    background-color: var(--color-surface-1);
+    box-shadow: var(--shadow-1);
+  }
+
+  &:disabled {
+    color: var(--color-on-disabled);
+    background-color: var(--color-disabled);
+    box-shadow: var(--shadow-0);
+  }
+}
+
+.button--filled {
+  color: var(--color-on-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--shadow-0);
+  background-color: var(--color-primary);
+
+  &:hover {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-0);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-0);
+  }
+
+  &:disabled {
+    color: var(--color-on-disabled);
+    background-color: var(--color-disabled);
+    box-shadow: var(--shadow-0);
+  }
+}
+
+.button--filled-tonal {
+  color: var(--color-on-secondary-container);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--shadow-0);
+  background-color: var(--color-secondary-container);
+
+  &:hover {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-0);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-0);
+  }
+
+  &:disabled {
+    color: var(--color-on-disabled);
+    background-color: var(--color-disabled);
+    box-shadow: var(--shadow-0);
+  }
+}
+
+.button--outlined {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  background: transparent;
+  box-shadow: 0 0 0 1px var(--color-outline);
+
+  &:focus {
+    &::before {
+      border: 1px solid var(--color-primary);
+    }
+  }
+
+  &.button--surface {
+    &::before {
+      background: var(--color-surface);
+    }
+  }
+
+  &:disabled {
+    color: var(--color-on-disabled);
+    box-shadow: 0 0 0 1px var(--color-disabled);
+  }
+}
+
+.button--text {
+  color: var(--color-primary);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  background: transparent;
+  min-width: 48px;
+
+  &:disabled {
+    color: var(--color-on-disabled);
+  }
+
+  .button__icon {
+    &:first-child {
+      margin: 0 4px 0 0;
+    }
+
+    &:last-child {
+      margin: 0 0 0 4px;
+    }
+  }
+
+  .button__label {
+    margin: 0 4px;
+  }
+}
+
+.button--icon {
+  color: var(--color-primary);
+  line-height: 1;
+  font-size: 24px;
+  padding: 8px;
+  border: 0;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  background: transparent;
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  &:disabled {
+    color: var(--color-on-disabled);
+  }
+}
+
+.button--floating-action {
+  color: var(--color-on-primary-container);
+  line-height: 1;
+  padding: 16px;
+  border: 0;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+  background-color: var(--color-primary-container);
+  box-shadow: var(--shadow-3);
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  .button__icon {
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    margin: 0 8px 0 0;
+  }
+
+  .button__label {
+    margin: 4px;
+  }
+
+  &.button--small {
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  &.button--large {
+    font-size: 36px;
+    padding: 30px;
+    border-radius: 28px;
+
+    svg {
+      height: 36px;
+      width: 36px;
+    }
+
+    .material-icons {
+      font-size: 36px;
+    }
+  }
+
+  &.button--surface {
+    color: var(--color-primary);
+    background-color: var(--color-surface);
+  }
+
+  &.button--secondary {
+    color: var(--color-on-secondary-container);
+    background-color: var(--color-secondary-container);
+  }
+
+  &.button--tertiary {
+    color: var(--color-on-tertiary-container);
+    background-color: var(--color-tertiary-container);
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-4);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-3);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-3);
+  }
+
+  &.button--lowered {
+    box-shadow: var(--shadow-1);
+
+    &:hover {
+      box-shadow: var(--shadow-2);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-1);
+    }
+
+    &:active {
+      box-shadow: var(--shadow-1);
+    }
+  }
+
+  &:disabled {
+    color: var(--color-on-disabled);
+    background-color: var(--color-disabled);
+    box-shadow: var(--shadow-0);
+  }
+}

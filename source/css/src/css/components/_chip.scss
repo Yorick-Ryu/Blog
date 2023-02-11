@@ -1,0 +1,182 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-outline);
+  background-color: var(--color-surface);
+
+  @include state-layer;
+}
+
+.chip--disabled {
+  pointer-events: none;
+}
+
+.chip__icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+
+  svg {
+    height: 18px;
+    width: 18px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 18px;
+  }
+
+  &:first-child {
+    margin: 0 8px 0 -8px;
+  }
+
+  &:last-child {
+    margin: 0 -8px 0 8px;
+  }
+}
+
+.chip__avatar {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+
+  svg {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+
+  &:first-child {
+    margin: -2px 8px -2px -12px;
+  }
+
+  &:last-child {
+    margin: -2px -12px -2px 8px;
+  }
+}
+
+.chip__action {
+  width: 24px;
+  height: 24px;
+
+  .button--icon {
+    font-size: 18px;
+    padding: 3px;
+    border-radius: 12px;
+    color: currentColor;
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+
+    .material-icons {
+      font-size: 18px;
+    }
+
+    &::after {
+      background-color: currentColor;
+    }
+  }
+
+  &:first-child {
+    margin: -2px 8px -2px -12px;
+  }
+
+  &:last-child {
+    margin: -2px -12px -2px 8px;
+  }
+}
+
+.chip--assist {
+  color: var(--color-on-surface);
+
+  .chip__icon {
+    color: var(--color-primary);
+  }
+}
+
+.chip--filter {
+  color: var(--color-on-surface-variant);
+
+  .chip__icon {
+    color: var(--color-on-surface-variant);
+  }
+}
+
+.chip--input {
+  color: var(--color-on-surface-variant);
+
+  .chip__icon {
+    color: var(--color-on-surface-variant);
+  }
+}
+
+.chip--suggestion {
+  color: var(--color-on-surface-variant);
+
+  .chip__icon {
+    color: var(--color-on-surface-variant);
+  }
+}
+
+.chip--elevated {
+  background-color: var(--color-surface-1);
+  box-shadow: var(--shadow-1);
+
+  &:hover {
+    box-shadow: var(--shadow-2);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-1);
+  }
+
+  &.chip--disabled {
+    box-shadow: var(--shadow-0);
+    background-color: var(--color-disabled);
+  }
+}
+
+.chip--selected {
+  color: var(--color-on-secondary-container);
+  background-color: var(--color-secondary-container);
+  box-shadow: none;
+
+  .chip__icon {
+    color: var(--color-on-secondary-container);
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-1);
+  }
+
+  &.chip--disabled {
+    background-color: var(--color-disabled);
+  }
+}
+
+.chip--disabled {
+  color: var(--color-on-disabled);
+
+  .chip__icon {
+    color: var(--color-on-disabled);
+  }
+}

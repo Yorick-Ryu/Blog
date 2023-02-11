@@ -1,0 +1,13 @@
+@each $value in (relative, absolute, fixed, static, sticky) {
+  .position-#{$value} {
+    position: $value;
+  }
+}
+
+@each $side in (top, right, bottom, left) {
+  @for $size from 0 through 5 {
+    .#{$side}-#{$size} {
+      #{$side}: var(--space-#{$size});
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.snackbar-container {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 8;
+}
+
+.snackbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-inverse-surface);
+  color: var(--color-on-inverse-surface);
+  padding: var(--space-3);
+  font-size: 14px;
+  border-radius: 4px;
+  min-width: 288px;
+  max-width: 568px;
+
+  .button--text {
+    margin: -10px -12px;
+    color: var(--color-inverse-primary);
+  }
+}
+
+.snackbar + .snackbar {
+  margin-top: 16px;
+}

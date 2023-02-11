@@ -1,0 +1,75 @@
+@use "sass:map";
+
+.sheet {
+  position: fixed;
+  width: auto;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: visibility, opacity;
+  transition-duration: var(--transition-duration);
+  z-index: 32;
+}
+
+.sheet__container {
+  box-sizing: border-box;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  overflow: auto;
+  width: 320px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 12px;
+  border-radius: 16px 0 0 16px;
+  transform: translateX(100%);
+  transition: transform var(--transition-duration);
+}
+
+.sheet__scrim {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-scrim);
+  z-index: 0;
+}
+
+.sheet-toggle {
+  display: none;
+}
+
+.sheet-toggle:checked + .sheet,
+.sheet--open {
+  opacity: 1;
+  visibility: visible;
+
+  .sheet__container {
+    transform: translateX(0);
+  }
+
+  .sheet__scrim {
+  }
+}
+
+@media (min-width: map.get($breakpoints, "laptop")) {
+  .sheet:not(.sheet--modal) {
+    position: static;
+    width: 320px;
+    opacity: 1;
+    visibility: visible;
+
+    .sheet__container {
+      border-radius: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(0);
+    }
+
+    .sheet__scrim {
+      display: none;
+    }
+  }
+}

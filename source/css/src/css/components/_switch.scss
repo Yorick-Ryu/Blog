@@ -1,0 +1,78 @@
+.switch {
+  display: inline-block;
+  height: 40px;
+  width: 56px;
+  position: relative;
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked ~ .switch__track {
+      background-color: var(--color-primary);
+    }
+
+    &:checked ~ .switch__thumb {
+      left: 20px;
+
+      &::before {
+        background-color: var(--color-primary);
+      }
+    }
+
+    &:disabled {
+      & ~ .switch__track {
+        pointer-events: none;
+        background-color: var(--color-disabled);
+      }
+
+      & ~ .switch__thumb {
+        pointer-events: none;
+
+        &::before {
+          background-color: var(--color-on-disabled);
+        }
+      }
+    }
+  }
+}
+
+.switch__track {
+  height: 16px;
+  width: 36px;
+  background: var(--color-on-background);
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 8px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.switch__thumb {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left var(--transition-duration);
+  color: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include state-layer;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background-color var(--transition-duration);
+  }
+}

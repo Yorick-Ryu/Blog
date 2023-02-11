@@ -1,0 +1,181 @@
+.animate {
+  animation-duration: 0.15s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate--zoom-in {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.animate--zoom-out {
+  animation-name: zoomOut;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate--fade-in {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.animate--fade-out {
+  animation-name: fadeOut;
+}
+
+@keyframes drawerIn {
+  from {
+    margin-left: -240px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+.animate--drawer-in {
+  animation-name: drawerIn;
+}
+
+@keyframes drawerOut {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: -256px;
+  }
+}
+
+.animate--drawer-out {
+  animation-name: drawerOut;
+}
+
+@keyframes sheetIn {
+  from {
+    margin-right: -256px;
+  }
+
+  to {
+    margin-right: 0;
+  }
+}
+
+.animate--sheet-in {
+  animation-name: sheetIn;
+}
+
+@keyframes sheetOut {
+  from {
+    margin-right: 0;
+  }
+
+  to {
+    margin-right: -240px;
+  }
+}
+
+.animate--sheet-out {
+  animation-name: sheetOut;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+
+   to {
+     transform: scale(1);
+   }
+}
+
+.animate--scale-in {
+  animation-name: scaleIn;
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
+
+.animate--scale-out {
+  animation-name: scaleOut;
+}
+
+@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.headShake {
+  animation-timing-function: ease-in-out;
+  animation-name: headShake;
+}

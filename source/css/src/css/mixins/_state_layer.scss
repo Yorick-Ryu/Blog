@@ -1,0 +1,32 @@
+@mixin state-layer {
+  position: relative;
+
+  // State layer for interaction states
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    opacity: 0;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::after {
+      opacity: var(--opacity-state-hover);
+    }
+  }
+
+  &:focus {
+    &::after {
+      opacity: var(--opacity-state-focus);
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: var(--opacity-state-press);
+    }
+  }
+}

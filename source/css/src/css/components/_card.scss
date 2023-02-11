@@ -1,0 +1,56 @@
+@use "sass:color";
+
+.card {
+  display: block;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+a.card {
+  @include state-layer;
+}
+
+.card--elevated {
+  color: var(--color-on-surface);
+  background-color: var(--color-surface-1);
+  box-shadow: var(--shadow-1);
+}
+
+a.card--elevated {
+  &:hover {
+    box-shadow: var(--shadow-2);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-1);
+  }
+}
+
+.card--filled {
+  color: var(--color-on-surface-variant);
+  background-color: var(--color-surface-variant);
+}
+
+a.card--filled {
+  &:hover {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:focus {
+    box-shadow: var(--shadow-1);
+  }
+
+  &:active {
+    box-shadow: var(--shadow-0);
+  }
+}
+
+.card--outlined {
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 1px var(--color-outline);
+}

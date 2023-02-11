@@ -1,0 +1,114 @@
+@use "sass:map";
+
+.navigation-drawer {
+  position: fixed;
+  width: auto;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: visibility, opacity;
+  transition-duration: var(--transition-duration);
+  z-index: 32;
+}
+
+.navigation-drawer__container {
+  box-sizing: border-box;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  overflow: auto;
+  width: 360px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 12px;
+  border-radius: 0 16px 16px 0;
+  transform: translateX(-100%);
+  transition: transform var(--transition-duration);
+}
+
+.navigation-drawer__scrim {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-scrim);
+  z-index: 0;
+}
+
+.navigation-drawer-toggle {
+  display: none;
+}
+
+.navigation-drawer-toggle:checked + .navigation-drawer,
+.navigation-drawer--open {
+  opacity: 1;
+  visibility: visible;
+
+  .navigation-drawer__container {
+    transform: translateX(0);
+  }
+
+  .navigation-drawer__scrim {
+  }
+}
+
+@media (min-width: map.get($breakpoints, "laptop")) {
+  .navigation-drawer:not(.navigation-drawer--modal) {
+    position: static;
+    width: 360px;
+    opacity: 1;
+    visibility: visible;
+
+    .navigation-drawer__container {
+      border-radius: 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      transform: translateX(0);
+    }
+
+    .navigation-drawer__scrim {
+      display: none;
+    }
+  }
+}
+
+.navigation-drawer__item {
+  padding: 18px 24px;
+  display: flex;
+  text-decoration: none;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-on-surface-variant);
+  outline: none;
+  background-color: var(--color-surface);
+  cursor: pointer;
+
+  @include state-layer;
+
+  &.navigation-drawer__item--active {
+    color: var(--color-on-primary-container);
+    background-color: var(--color-primary-container);
+  }
+}
+
+.navigation-drawer__item__icon {
+  height: 24px;
+  width: 24px;
+
+  &:first-child {
+    margin: -2px 12px -2px -8px;
+  }
+
+  &:last-child {
+    margin: -2px -8px -2px 12px;
+  }
+}
+
+.navigation-drawer__item__label {
+  flex-grow: 1;
+}
