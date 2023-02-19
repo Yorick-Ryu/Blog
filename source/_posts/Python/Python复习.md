@@ -5,7 +5,7 @@ tags:
   - 课程笔记
 index_img: /img/default.png
 categories:
-  - Pythinon
+  - Python
 date: 2023-02-13 14:17:46
 sticky:
 ---

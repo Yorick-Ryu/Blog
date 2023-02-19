@@ -3,6 +3,7 @@ title: 酷客工具箱使用文档
 tags:
   - doc
 index_img: /img/default.png
+banner_img: /img/ic_launcher-playstore.png
 categories:
   - Project
 date: 2023-02-11 21:32:15
