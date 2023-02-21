@@ -21,7 +21,7 @@ sticky:
     - [metaclass(元类)](#metaclass元类)
 
 ## `__init()__`方法
-注意：两个下划线，类似Java的构造器函数
+注意：**两个下划线**，类似Java的构造器函数
 
 实例：
 ```py

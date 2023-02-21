@@ -47,11 +47,10 @@ sticky:
 
   ```python
   # 输入身高、体重
-  height = input("请输入身高（cm）：")
-  weight = input("请输入体重（kg）：")
-  # 查询健康
+  height = float(input("请输入身高（m）："))
+  weight = float(input("请输入体重（kg）："))
   # BMI = 体重（kg）/ 身高（m）的平方
-  BMI = float(weight) / (float(height)/100)**2
+  BMI = weight / float(height) ** 2
   # 低于18.5 偏瘦
   if BMI < 18.5:
       print("偏瘦")
@@ -64,7 +63,6 @@ sticky:
   # 超过28肥胖
   elif BMI > 28:
       print("肥胖")
-  
   ```
 
 2、编程完成(三选一)：
@@ -118,12 +116,12 @@ sticky:
   print(num) # 7
   ```
 
--  检查字符串"Life is short. I use python."中是否包含字符串"python"，若包含则替换为 "Python"后输出新字符串，否则输出原字符串。
+- 检查字符串"Life is short. I use python."中是否包含字符串"python"，若包含则替换为 "Python"后输出新字符串，否则输出原字符串。
 
   ```python
   s = "Life is short. I use python"
   
-  if s.find("python"):
+  if s.find("python") != -1:
       print(s.replace("python", "Python"))
   else:
       print(s)
@@ -148,15 +146,13 @@ class triangle:
         self.a = a
         self.b = b
         self.c = c
+        self.s = (a + b + c) / 2
 
     def canTri(self, a, b, c) -> bool:
         return a + b > c and b + c > a and a + c > b
 
-    def getS(self, a, b, c) -> float:
-        return (a + b + c) / 2
-
     def getArea(self, a, b, c) -> float:
-        s = self.getS(a, b, c)
+        s = self.s
         return pow(s * (s - a) * (s - b) * (s - c), 0.5)
 
     def getRes(self) -> float:
@@ -174,6 +170,8 @@ print(tri.getRes())
 ```python
 for i in range(1, 100):
     if i % 7 == 0 or "7" in str(i):
+        print("拍手")
+    else:
         print(i)
 # 30 次
 ```
@@ -186,8 +184,7 @@ def sum(a):
         return 0
     if a == 1:
         return 1
-    else:
-        return sum(a - 1) + sum(a - 2)
+    return sum(a - 1) + sum(a - 2)
 
 for i in range(15):
     print(sum(i))
@@ -208,17 +205,20 @@ class MyNumber:
         v = self.data - other.data
         return MyNumber(v)
 
-    def __mul__():
-        pass
+    def __mul__(self, other):
+        return MyNumber(self.data * other.data)
 
-    def __div__():
-        pass
+    def __truediv__(self, other):
+        return MyNumber(self.data / other.data)
 
 
 n1 = MyNumber(100)
 n2 = MyNumber(200)
 
-print((n1-n2).data) # -100
+print((n1 + n2).data)  # 300
+print((n1 - n2).data)  # -100
+print((n1 * n2).data)  # 20000
+print((n1 / n2).data)  # 0.5
 ```
 
 9、重写两个点坐标的比较符
@@ -271,29 +271,22 @@ class Equation(object):
         self.a = float(a)
         self.b = float(b)
         self.c = float(c)
+        self.e = self.b**2 - (4 * self.a * self.c)
 
-    def getDiscriminant(self):
-        return pow(self.b, 2) - 4 * self.a * self.c
-
-    def getRoot1(self):
-        if self.getDiscriminant() < 0:
-            print("判别式小于0")
-            return 0
-        return (-self.b + pow(self.getDiscriminant(), 0.5)) / 2 * self.a
-
-    def getRoot2(self):
-        if self.getDiscriminant() < 0:
-            print("判别式小于0")
-            return 0
-        return (-self.b - pow(self.getDiscriminant(), 0.5)) / 2 * self.a
+    def getRes(self):
+        a, b, c, e = self.a, self.b, self.c, self.e
+        if e < 0:
+            print("无解")
+        elif e == 0:
+            print(-b / 2 * a)
+        else:
+            print(f"x1 = {(-b-pow(e,0.5))/(2*a)} , x2 = {(-b+pow(e,0.5))/(2*a)}")
 
 
 a = input("输入二次项系数")
 b = input("输入一次项系数")
 c = input("输入常数项系数")
 equation = Equation(a, b, c)
-print(f"判别式结果为：{equation.getDiscriminant()}")
-print(f"第一个根为：{equation.getRoot1()}")
-print(f"第二个根为：{equation.getRoot2()}")
+equation.getRes()
 ```
 

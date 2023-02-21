@@ -12,20 +12,29 @@ sticky:
 ### Python_Mini_Note
 
 1. import random 随机数库
-2. import decimal 十进制库，提供精准的浮点数
-3. `//`地板除,两数相除后向下取整的结果
-4. 一个公式：`x == (x // y) * y+(x % y)`
-5. `divmod(a,b)` 得到 `(a // b,a % b)`
-6. `ads(x)`返回x的绝对值，若x是复数，则返回x的模
-7. `pow(x,y)`和`x ** y`都表示x的y次方 
-8. `pow(x,y,z)`表示x的y次方除以z的余数
-9. 流程图
 
-    ![流程图](img/img1.png)
-10. for in 
-11. 深拷贝和浅拷贝 `import copy`
-12. 列表推导式
-13. 元组不可以修改，只支持查
+2. import decimal 十进制库，提供精准的浮点数
+
+3. `//`地板除,两数相除后向下取整的结果
+
+4. 一个公式：`x == (x // y) * y+(x % y)`
+
+5. `divmod(a,b)` 得到 `(a // b,a % b)`
+
+6. `ads(x)`返回x的绝对值，若x是复数，则返回x的模
+
+7. `pow(x,y)`和`x ** y`都表示x的y次方 
+
+8. `pow(x,y,z)`表示x的y次方除以z的余数
+
+9. for in 
+
+10. 深拷贝和浅拷贝 `import copy`
+
+11. 列表推导式
+
+12. 元组不可以修改，只支持查
+
 14. 打包和解包
     ```py
     t = (123,222,"hh")
@@ -33,6 +42,7 @@ sticky:
     a,b,c,d,e,f = 'Yorick'
     a,b,c,*d = 'Yorick'
     ```
+    
 15. 多重赋值`x,y = 1,2`
 
 16. 元组里放列表就可变
@@ -49,14 +59,16 @@ sticky:
 19. filter()
     ```py
     list(filter(str.islower,"Yorick"))
-    #返回orick
+    # ['o', 'r', 'i', 'c', 'k']
     ```
+    
 20. set 集合元素具有唯一性
     ```py
     set([1,1,2,3,5,3])
     #输出去重集合
     {1, 2, 3, 5}
     ```
+    
 21. 参数列表里`/`左边只能传递位置参数，不能传递关键字参数。
     ```py
     def abc(a,/,b,c):
@@ -66,11 +78,13 @@ sticky:
     abc(a = 1,2,3)
     #报错SyntaxError: positional argument follows keyword argument
     ```
+    
 22. `*`限制参数列表,`*`号右侧只能为关键字参数,左侧不限
     ```py
     def abc(a,*,b,c):
 	    print(a,b,c)
     ```
+    
 23. 收集参数，利用元组（tuple）的打包解包功能实现动态参数
     ```py
     def myfunc(*args):
@@ -82,6 +96,7 @@ sticky:
     # 第二个参数是：2
     ```
     当某函数的参数列表中存在收集参数时，收集参数右侧只能为关键字参数,左侧不限。（同22）
+    
 24. `**`字典形式的收集参数
     ```py
     def myfunc(a,*b,**c):
@@ -101,6 +116,7 @@ sticky:
         Return a formatted version of S, using substitutions from args and kwargs.
         The substitutions are identified by braces ('{' and '}').
     ```
+    
 25. 解包参数
     调用时解包元组`*`，解包字典`**`。
     ```py
@@ -114,6 +130,7 @@ sticky:
     #第二个正常输出1 2 3 4，解包了
     myfunc(*arg)
     ```
+    
 26. 全局变量无法在函数中改变，只能访问。
     如果非要改，用`global`关键字，但不提倡
     ```py
@@ -128,6 +145,7 @@ sticky:
     print(x)
     #输出520，全局变量x被改变
     ````
+    
 27. `nonlocal`实现在内部函数改变外部函数的变量
 
 28. 变量作用域遵循LEGB规则，优先级由高到低
@@ -139,8 +157,6 @@ sticky:
 29. 闭包，工厂函数
     1. 利用嵌套函数的外层作用域具有记忆能力这个特性。
     2. 将内层函数作为返回值给返回
-
-
 
 30. 返回值是一个函数时不用加`()`
 
