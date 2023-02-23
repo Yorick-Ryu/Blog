@@ -75,6 +75,15 @@ sticky:
       if i % 3 == 0:
           sum += i
   print("result:" , sum)
+  
+  # 另法：用步长
+  ans = 0
+  for i in range(0, 101, 3):
+      ans = ans + i
+  print(ans)
+  
+  # 另法：用sum
+  print(sum(list(range(3, 101, 3))))
   ```
 
 - 一个数如果恰好等于它的因子(不包含自身)之和，则称之为"完数"。 例如6=1+2+3。编程找出100以内的所有完数并输出。
@@ -102,12 +111,20 @@ sticky:
           print(i)
       num = 0
   # 25个
+  # 另法：用break
+  for a in range(2, 101):
+      for b in range(2, a):
+          if a % b == 0:
+              break
+      else:
+          print(a)
   ```
 
 3、编程完成(三选一)：
 
 - 己知字符串s= 'AbcDeFGhIJkmN'， 请计算该字符串中小写字母的数量。
   ```python
+  s= 'AbcDeFGhIJkmN'
   num = 0
   for i in s:
       if i.islower():
@@ -115,7 +132,7 @@ sticky:
   
   print(num) # 7
   ```
-
+  
 - 检查字符串"Life is short. I use python."中是否包含字符串"python"，若包含则替换为 "Python"后输出新字符串，否则输出原字符串。
 
   ```python
@@ -210,15 +227,18 @@ class MyNumber:
 
     def __truediv__(self, other):
         return MyNumber(self.data / other.data)
+    
+    def __str__(self):
+        return str(self.data)
 
 
 n1 = MyNumber(100)
 n2 = MyNumber(200)
 
-print((n1 + n2).data)  # 300
-print((n1 - n2).data)  # -100
-print((n1 * n2).data)  # 20000
-print((n1 / n2).data)  # 0.5
+print(n1 + n2)  # 300
+print(n1 - n2)  # -100
+print(n1 * n2)  # 20000
+print(n1 / n2)  # 0.5
 ```
 
 9、重写两个点坐标的比较符
@@ -235,6 +255,7 @@ print((n1 / n2).data)  # 0.5
         __ne__(self,rhs)       self != rhs       不等于
 """
 
+
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -249,8 +270,8 @@ class Point:
     def __lt__(self, p):
         return ((pow(self.x, 2) + pow(self.y, 2)) - (pow(p.x, 2) + pow(p.y, 2))) < 0
 
-    def printIt(self):
-        print(f"({self.x},{self.y})")
+    def __str__(self):
+        return f"({self.x},{self.y})"
 
 
 p1 = Point(3, 4)
@@ -258,9 +279,9 @@ p2 = Point(1, 2)
 
 p3 = p1 + p2
 p4 = p1 - p2
-p3.printIt()   # (4,6)
-p4.printIt()   # (2,2)
-print(p1 < p2) # False
+print(p3) # (4,6)
+print(p4) # (2,2)
+print(p1 < p2)  # False
 ```
 
 10、编程，为二次方程式ax2+bx+c=0设计一个名Equation 的类，判别方程有无实数解，并求解。
@@ -288,5 +309,51 @@ b = input("输入一次项系数")
 c = input("输入常数项系数")
 equation = Equation(a, b, c)
 equation.getRes()
+```
+
+11. 定义学生类，包括姓名、年龄、成绩(语文，数学，英语)等属性，包括获取姓名getName。获取年龄getAge、获取3门成绩最高分和平均分(保留小数点后2位)getScore等成员方法。
+
+```python
+class Student:
+    def __init__(self, name, age, *score):
+        self.__name = name
+        self.__age = age
+        self.__score = score
+
+    def getName(self):
+        return self.__name
+
+    def getAge(self):
+        return self.__age
+
+    def getScore(self):
+        print(f"最高分：{max(self.__score):.2f}")
+        print(f"平均分：{sum(self.__score)/len(self.__score):.2f}")
+
+student1 = Student("yorick", 22, 98, 88, 78)
+print(student1.getName())
+print(student1.getAge())
+student1.getScore()
+```
+
+12 . 定义一个圆类，包括半径属性，以及求面积和求周长两个方法，并创建2个圆对象,
+分别求其面积和周长。
+
+```python
+import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def getCircumference(self):
+        return 2 * math.pi * self.radius
+
+    def getArea(self):
+        return math.pi * self.radius**2
+
+circle1 = Circle(4)
+print(circle1.getCircumference())
+print(circle1.getArea())
 ```
 
