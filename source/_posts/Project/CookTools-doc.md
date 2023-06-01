@@ -95,6 +95,8 @@ sticky:
 
 > [教程视频点此](https://www.bilibili.com/video/BV1Fj411K7G4/)
 
+<iframe src="//player.bilibili.com/player.html?aid=436962585&bvid=BV1Fj411K7G4&cid=1010286469&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="400px" width="100%"> </iframe>
+
 ***
 
 ## 电量统计
@@ -103,7 +105,7 @@ sticky:
 
 在shell界面
 
-- iqoo冻结`com.iqoo.powersaving`
+- iqoo 冻结`com.iqoo.powersaving`
 - vivo 冻结`com.iqoo.powersaving`
 
 ![image-20230216131730019](./img/image-20230216131730019.png)
@@ -178,12 +180,12 @@ sticky:
 
 ### 本站下载
 
-| 组件名称     | 下载地址                                                     | 作用/功能 |
-| ------------ | ------------------------------------------------------------ | --------- |
+| 组件名称     | 下载地址                                                                                               | 作用/功能 |
+| ------------ | ------------------------------------------------------------------------------------------------------ | --------- |
 | 电源信息1.2  | [点击此处](https://yorick.love/file/%E7%94%B5%E6%BA%90%E4%BF%A1%E6%81%AF-com.vivo.fuelsummary-1.2.apk) | 满血充电  |
 | 电源信息1.6  | [点击此处](https://yorick.love/file/%E7%94%B5%E6%BA%90%E4%BF%A1%E6%81%AF-com.vivo.fuelsummary-1.6.apk) | 满血充电  |
-| 工厂测试1.5  | [点击此处](https://yorick.love/file/%E5%B7%A5%E5%8E%82%E6%B5%8B%E8%AF%95_1.5.apk) |           |
-| NetworkState | [点击此处](https://yorick.love/file/NetworkState.apk)        | 锁频段    |
+| 工厂测试1.5  | [点击此处](https://yorick.love/file/%E5%B7%A5%E5%8E%82%E6%B5%8B%E8%AF%95_1.5.apk)                      |           |
+| NetworkState | [点击此处](https://yorick.love/file/NetworkState.apk)                                                  | 锁频段    |
 
 ***
 
