@@ -233,7 +233,7 @@ sticky:
 | IQOO Neo5 / 5s / 活力版 | OriginOS 3.0 |
 | IQOO Neo6               | OriginOS 3.0 |
 | IQOO Neo7               | 13.1.9.1     |
-| vivo X90 Por+           | 19.1         |
+| vivo X90 Pro+           | 19.1         |
 
 ***
 
