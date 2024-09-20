@@ -28,7 +28,7 @@ sticky:
   - [冻结应用](#冻结应用)
   - [资源下载](#资源下载)
     - [加群下载](#加群下载)
-    - [本站下载](#本站下载)
+    - [Github下载](#github下载)
   - [免责声明](#免责声明)
   - [隐私协议](#隐私协议)
   - [可用名单](#可用名单)
@@ -178,14 +178,16 @@ sticky:
 
 群里还有老哥帮你解决问题，但是在问问题之前，一定要**先在文档中找一下**。99\%的答案都在本篇文档中了。
 
-### 本站下载
+### Github下载
 
 | 组件名称     | 下载地址                                                                                               | 作用/功能 |
 | ------------ | ------------------------------------------------------------------------------------------------------ | --------- |
-| 电源信息1.2  | [点击此处](https://yorick.love/file/%E7%94%B5%E6%BA%90%E4%BF%A1%E6%81%AF-com.vivo.fuelsummary-1.2.apk) | 满血充电  |
-| 电源信息1.6  | [点击此处](https://yorick.love/file/%E7%94%B5%E6%BA%90%E4%BF%A1%E6%81%AF-com.vivo.fuelsummary-1.6.apk) | 满血充电  |
-| 工厂测试1.5  | [点击此处](https://yorick.love/file/%E5%B7%A5%E5%8E%82%E6%B5%8B%E8%AF%95_1.5.apk)                      |           |
-| NetworkState | [点击此处](https://yorick.love/file/NetworkState.apk)                                                  | 锁频段    |
+| 电源信息1.2  | [点击此处](https://github.com/Yorick-Ryu/CokoTools/tree/master/data) | 满血充电  |
+| 电源信息1.6  | [点击此处](https://github.com/Yorick-Ryu/CokoTools/tree/master/data) | 满血充电  |
+| 工厂测试1.5  | [点击此处](https://github.com/Yorick-Ryu/CokoTools/tree/master/data)                      |           |
+| NetworkState | [点击此处](https://github.com/Yorick-Ryu/CokoTools/tree/master/data)                                                  | 锁频段    |
+
+进去找到所需的组件进行下载
 
 ***
 
@@ -237,7 +239,7 @@ sticky:
 
 **如何您觉得软件或者文档有用，可以请我喝杯冰镇快乐水。**
 
-![微信扫码赞赏](https://yorick.love/img/qrcode/wechat_donate_code.png)
+![微信扫码赞赏](./img/wechat_donate_code.png)
 
 ***
 

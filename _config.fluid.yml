@@ -448,7 +448,7 @@ footer:
   # 国内大陆服务器的备案信息
   # For Chinese mainland website policy, other areas keep disable
   beian:
-    enable: true
+    enable: false
     # ICP证号
     icp_text: 苏ICP备2022048301号
     # 公安备案号，不填则只显示ICP
@@ -1005,7 +1005,7 @@ links:
   items:
     - {
       title: "Yroick Harbor",
-      intro: "约里克港的主站",
+      intro: "约里克港的主站(已经过期)",
       link: "http://yorick.love/",
       avatar: "/img/icon/icon_coko.png"
     }
