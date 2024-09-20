@@ -466,12 +466,12 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/bg/lucy.png
+  banner_img: /img/bg/bg.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
   # Available: 0 - 100
-  banner_img_height: 100
+  banner_img_height: 80
 
   # 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
@@ -538,7 +538,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/bg/lucy.png
+  banner_img: /img/bg/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -888,7 +888,7 @@ giscus:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/bg/bg_1.png
+  banner_img: /img/bg/bg_1.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
 
@@ -997,7 +997,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/bg/lucy.png
+  banner_img: /img/bg/bg.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
@@ -1005,8 +1005,8 @@ links:
   items:
     - {
       title: "Yroick Harbor",
-      intro: "约里克港的主站(已经过期)",
-      link: "http://yorick.love/",
+      intro: "约里克港的主站(域名即将过期)",
+      link: "http://yorick.icu/",
       avatar: "/img/icon/icon_coko.png"
     }
     - {
