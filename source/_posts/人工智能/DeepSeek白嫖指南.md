@@ -1,3 +1,15 @@
+---
+title: DeepSeek白嫖指南
+tags:
+  - AI
+  - DeepSeek
+index_img: /img/image-20250210202730839.png
+categories:
+  - 人工智能
+date: 2025-02-13 20:18:05
+sticky:
+---
+
 # DeepSeek白嫖指南
 
 | 平台   | 免费额度（Tokens）             | 获取链接                                    | 接口地址（base_url）               | 模型名称（model）               | 文档 |

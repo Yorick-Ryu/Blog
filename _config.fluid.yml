@@ -1005,20 +1005,20 @@ links:
   items:
     - {
       title: "Yroick Harbor",
-      intro: "约里克港的主站(域名即将过期)",
-      link: "http://yorick.icu/",
+      intro: "约里克港的主站",
+      link: "https://blog.rick216.cn",
       avatar: "/img/icon/icon_coko.png"
     }
     - {
       title: "Yroick Harbor",
       intro: "约里克港的Github Page版本，与主站保持同步更新",
-      link: "https://yorick-ryu.github.io/",
+      link: "https://yorick-ryu.github.io",
       avatar: "/img/icon/icon_coko.png"
     }
     - {
       title: "Fluid Blog",
       intro: "本博客所采用主题的博客",
-      link: "https://hexo.fluid-dev.com/",
+      link: "https://hexo.fluid-dev.com",
       avatar: "/img/fluid.png"
     }
 

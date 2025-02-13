@@ -4,7 +4,7 @@ date: 2022-11-28 11:55:17
 categories: 
 - Android
 index_img: /img/project_structure.png
-sticky: 1000
+sticky: 
 ---
 # Android 预备知识
 
