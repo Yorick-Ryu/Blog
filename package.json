@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "python copy_blog_images.py && hexo generate",
+    "build": "node copy_blog_images.js && hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
@@ -14,6 +14,7 @@
   "dependencies": {
     "@chloerei/material-ui": "^0.0.17",
     "css": "^3.0.0",
+    "fs-extra": "^11.3.0",
     "hexo": "^7.1.1",
     "hexo-blog-encrypt": "^3.1.7",
     "hexo-deployer-git": "^3.0.0",
