@@ -1,11 +1,10 @@
 ---
 title: DeepSeek白嫖指南
 tags:
-  - AI
   - DeepSeek
 index_img: /img/image-20250210202730839.png
 categories:
-  - 人工智能
+  - AI
 date: 2025-02-13 20:18:05
 sticky:
 ---
