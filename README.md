@@ -33,3 +33,61 @@ npm run deploy   # Deploy your website
 
 1. 链接命名方式为`source\_posts`里的相对路径
 2. `copy_blog_images.js`文件是用来解决图片路径问题的，在build前自动运行
+
+
+## 错误处理
+
+### hexo d出现Permission denied (publickey). fatal: Could not read from remote repository.
+git@github.com: Permission denied (publickey). fatal: Could not read from remote repository.
+
+Collecting workspace informationFiltering to most relevant informationStill building the local workspace index, falling back to basic workspace search. Response may be less accurate.Based on the error message, it seems you're having an SSH authentication issue when trying to deploy your Hexo blog to GitHub. Here's how to fix it:
+
+
+解决方法：
+
+1. First, generate a new SSH key if you haven't already:
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+2. Add the SSH key to your SSH agent:
+
+```sh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+3. Copy your public key:
+
+```sh
+cat ~/.ssh/id_ed25519.pub
+```
+
+4. Add this public key to your GitHub account:
+   - Go to GitHub Settings > SSH and GPG keys
+   - Click "New SSH key"
+   - Paste your public key
+
+5. Test your SSH connection:
+
+```sh
+ssh -T git@github.com
+```
+
+After setting up SSH correctly, you can try deploying again using:
+
+```sh
+hexo clean && hexo deploy
+```
+
+This should resolve the "Permission denied (publickey)" error shown in your deployment attempt.
+
+Note: Your deployment configuration in _config.yml is correct:
+
+```yml
+deploy:
+- type: git
+  repository: git@github.com:Yorick-Ryu/Yorick-Ryu.github.io.git
+  branch: master
+```
