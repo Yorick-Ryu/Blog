@@ -4,7 +4,7 @@ tags:
   - development
 index_img: https://vadimkravcenko.com/wp-content/uploads/2023/01/1_RHbmuBKmpjh1JBwV1-gmtQ-1024x417.png
 categories:
-  - career
+  - Career
 date: 2023-01-12 22:27:34
 sticky:
 ---
