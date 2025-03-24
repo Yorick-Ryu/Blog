@@ -3,6 +3,7 @@ title: 火山引擎如何获取DeepSeek API并接入Cherry Studio
 tags:
   - DeepSeek
   - 火山引擎
+  - CherryStudio
 index_img: /img/image-20250221215426368.png
 categories:
   -  AI

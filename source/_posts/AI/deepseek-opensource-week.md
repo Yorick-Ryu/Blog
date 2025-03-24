@@ -1,10 +1,10 @@
 ---
 title: DeepSeek开源周
 tags:
-  - view
+  - DeepSeek
 index_img: /img/default.png
 categories:
-  - Android
+  - AI
 date: 2025-03-01 15:59:04
 sticky:
 ---

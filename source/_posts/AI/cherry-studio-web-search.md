@@ -1,7 +1,7 @@
 ---
 title: Cherry Studio实现联网搜索
 tags:
-  - Cherry Studio
+  - CherryStudio
 index_img: /img/image-20250225094444729.png
 categories:
   - AI
